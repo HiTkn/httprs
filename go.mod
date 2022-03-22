@@ -1,4 +1,4 @@
-module github.com/jfbus/httprs
+module github.com/hitkn/httprs
 
 go 1.12
 
