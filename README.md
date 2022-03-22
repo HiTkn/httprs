@@ -6,7 +6,7 @@ A ReadSeeker for http.Response.Body
 ## Usage
 
 ```
-import "github.com/jfbus/httprs"
+import "github.com/hitkn/httprs"
 
 resp, err := http.Get(url)
 
@@ -23,7 +23,7 @@ rs := httprs.NewHttpReadSeeker(resp, client)
 
 ## Doc
 
-See http://godoc.org/github.com/jfbus/httprs
+See http://godoc.org/github.com/hitkn/httprs
 
 ## LICENSE
 
