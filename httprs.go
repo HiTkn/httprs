@@ -142,14 +142,14 @@ func (r *HttpReadSeeker) Seek(offset int64, whence int) (int64, error) {
 	}
 	var err error
 	switch whence {
-	case 0:
-	case 1:
+	case io.SeekStart:
+	case io.SeekCurrent:
 		offset += r.pos
-	case 2:
+	case io.SeekEnd:
 		if r.res.ContentLength <= 0 {
 			return 0, ErrNoContentLength
 		}
-		offset = r.res.ContentLength - offset
+		offset = r.res.ContentLength + offset
 	}
 	if r.r != nil {
 		// Try to read, which is cheaper than doing a request
